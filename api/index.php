@@ -37,7 +37,9 @@ try {
     $array_to_return['err_message'] = $e->getMessage();
 }
 
-echo json_encode($array_to_return, 1);
+header('Content-Type: application/json');
+
+echo json_encode($array_to_return, JSON_UNESCAPED_UNICODE);
 die();
 
 function get_initials($firstName = '', $secondName = '', $lastName = ''): string
