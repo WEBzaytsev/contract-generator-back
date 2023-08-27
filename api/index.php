@@ -1,6 +1,8 @@
 <?php
 ini_set('default_charset', 'UTF-8');
 
+error_reporting(E_ALL & ~E_DEPRECATED);
+
 require_once '../vendor/autoload.php';
 require_once '../src/WordGenerator.php';
 
