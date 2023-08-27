@@ -3,7 +3,6 @@
 use PhpOffice\PhpWord\Element\TextRun;
 use PhpOffice\PhpWord\Exception\CopyFileException;
 use PhpOffice\PhpWord\Exception\CreateTemporaryFileException;
-use PhpOffice\PhpWord\Settings;
 use PhpOffice\PhpWord\TemplateProcessor;
 use PhpOffice\PhpWord\PhpWord;
 use PhpOffice\PhpWord\IOFactory;
@@ -20,8 +19,6 @@ class WordGenerator {
     public function __construct($templateFile) {
         $this->templateFile = $templateFile;
 
-        // Set template directory
-        Settings::setTempDir('../tmp');
         // Initialize PhpWord TemplateProcessor
         $this->document = new TemplateProcessor($templateFile);
     }
