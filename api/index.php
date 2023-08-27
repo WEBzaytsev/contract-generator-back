@@ -19,7 +19,7 @@ $static_fields['executorInitials'] = get_initials($static_fields['executorFirstN
 
 $collections = $data['collections'];
 $contract_number = $static_fields['contractNumber'];
-$task_content = $data['contractTasks'];
+//$task_content = $data['contractTasks'];
 
 try {
     $wordGenerator = new WordGenerator($templateFile);
